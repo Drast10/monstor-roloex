@@ -14,14 +14,19 @@ class App extends React.Component {
     .then(response=>response.json())
     .then(users=>this.setState({monsters:users}))
   }
+
+  handleChange =(e)=>{
+    this.setState({searchField:e.target.value})
+  }
  render(){
    const {monsters, searchField} = this.state;
    const filteredMonster = monsters.filter(monster=>monster.name.toLowerCase().includes(searchField.toLowerCase()))
   return (
     <div className="App">
       {/* <CardList><h1>Evee</h1></CardList> */}
+      <h1>Monster Rolodex</h1> 
      <SearchBox placeholder='search monster' 
-          handleChange={(e)=>this.setState({searchField:e.target.value})}/>
+          handleChange={this.handleChange}/>
       <CardList monsters={filteredMonster}/>
     </div>
   );
