@@ -2,7 +2,7 @@
   "name": "monster-roloex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Drast10.github.io/monstor-roloex",
+  "homepage": "./",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
